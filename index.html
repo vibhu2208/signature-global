@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Project</title>
+  <title>Signature Global Cloverdale SPR - Sector 71 Gurgaon</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +29,9 @@
   <!-- Loader -->
   <div id="loader">
     <div class="logoslide">
-      <img src="images/logo.webp" alt="Logo" />
+      <img src="images/loader.svg" alt="Logo" />
     </div>
+    <div id="brand-text">Signature Global</div>
     <div id="loading-text">Loading...</div>
     <div id="percent">0%</div>
   </div>
@@ -38,17 +39,16 @@
   <div id="page" class="page">
     <!-- Header / Navbar -->
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid px-5">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-            <img src="images/logo.webp" alt="Logo" height="40">
-            
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-5 d-flex align-items-center">
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 order-1" href="#">
+            <img src="images/sg-logo.jpg" alt="Logo" height="40">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
+
+          <!-- Collapsible Nav (centered items) -->
+          <div class="collapse navbar-collapse order-lg-2 flex-grow-1" id="nav">
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
               <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
@@ -58,16 +58,61 @@
               <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             </ul>
           </div>
+
+          <!-- Desktop Call Button (far right on lg+) -->
+          <a href="tel:+919355990063" class="call-btn d-none d-lg-inline-flex order-lg-3 ms-lg-3" aria-label="Call +91 93559 90063">
+            <i class="fa-solid fa-phone"></i>
+            <span class="cb-text">+91 93559 90063</span>
+          </a>
+
+          <!-- Hamburger (mobile) -->
+          <button class="navbar-toggler ms-2 order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Mobile Call Button (top-right on < lg) -->
+          <a href="tel:+919355990063" class="call-btn call-btn-sm d-inline-flex d-lg-none ms-auto order-3" aria-label="Call +91 93559 90063">
+            <i class="fa-solid fa-phone"></i>
+            <span class="cb-text">+91 93559 90063</span>
+          </a>
         </div>
       </nav>
     </header>
 
     <!-- Hero Section (Image) -->
     <section id="hero" class="hero">
-      <img src="images/hero.svg" alt="Hero Background" class="hero-img">
+      <img src="images/hero.webp" alt="Hero Background" class="hero-img">
       <div class="hero-overlay">
-        <h1>Welcome to Your Project</h1>
-        <p>Luxury Living | Modern Spaces | Sky High Views</p>
+        <h1>Signature Global Cloverdale SPR</h1>
+        <p>Ultra-luxury residences at Sector 71, Gurugram — where convenience and luxury converge</p>
+      </div>
+    </section>
+    
+    <!-- Quick Info (floating cards above About) -->
+    <section class="quickinfo-section" aria-label="Project Quick Info">
+      <div class="quickinfo-container">
+        <div class="qi-grid">
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+            <div class="qi-label">Project Status</div>
+            <div class="qi-value">Booking Open</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+            <div class="qi-label">About Project</div>
+            <div class="qi-value">6 Tower / 766 Units</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i></div>
+            <div class="qi-label">Land Area</div>
+            <div class="qi-value">8.12 Acres</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-gem" aria-hidden="true"></i></div>
+            <div class="qi-label">Specification</div>
+            <div class="qi-value">Ultra Luxury</div>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -75,15 +120,15 @@
     <section id="about" class="about-section">
       <div class="about-container">
         <h2 class="about-heading">
-          Where The Sky Unfolds A Life Without Limits
+          Signature Global Cloverdale SPR - Sector 71 Gurgaon
         </h2>
 
         <p>
-          Signature DeLuxe DXP and Signature Titanium SPR were huge successes, and now Signature Global is thrilled to announce the opening of Twin Towers in Sector 84, New Gurgaon. In the soon-to-be Global City, Signature Global Twin Towers DXP Sector 84 Gurgaon is ideally located close to the Dwarka Expressway. The project’s most notable feature is its ideal location, which puts it in close proximity to important social infrastructure like colleges, hospitals, schools, and shopping centers.
+          Cloverdale SPR is an ultra-luxury residential enclave crafted for those who seek iconic living in the heart of Gurugram. It offers a complete ecosystem of residences, retail, and lifestyle. With premium specifications and world-class design, Cloverdale SPR is a landmark where convenience and luxury converge.
         </p>
 
         <p>
-          The major highlight of this project is <strong>The Sky Deck</strong>, which gives you mesmerizing and breathing views from the top of the tower. It will be an excellent location to enjoy the evening or morning with your friends and family. The apartments have a unique and spacious design, with a <strong>3.6m floor-to-floor height</strong>.
+          Cloverdale SPR integrates retail, offices, and recreational spaces to elevate daily living. Discover convenience at your doorstep with curated shopping zones, workspaces, cafés, and more — all within the same address. This thoughtfully planned ecosystem offers a vibrant lifestyle that complements the modern urban pace. Precertified as IGBC Platinum and rated EDGE Advanced, Cloverdale SPR reflects a strong commitment to sustainable, environmentally responsible development alongside luxurious urban living.
         </p>
       </div>
     </section>
@@ -99,40 +144,24 @@
           <h3 class="highlights-heading">Project Highlights</h3>
           <ul class="highlights-list">
             <li>
+              <span class="h-title">50+ Amenities</span>
+              <span class="h-desc">Amenities</span>
+            </li>
+            <li>
               <span class="h-title">Booking Open</span>
               <span class="h-desc">Project Status</span>
             </li>
             <li>
-              <span class="h-title">5 Tower / 200 Units</span>
+              <span class="h-title">6 Tower / 766 Units</span>
               <span class="h-desc">About Project</span>
             </li>
             <li>
-              <span class="h-title">5.5 Acres</span>
+              <span class="h-title">8.12 Acres</span>
               <span class="h-desc">Land Area</span>
             </li>
             <li>
-              <span class="h-title">Expansive Balconies</span>
-              <span class="h-desc">70 x 6 Feet</span>
-            </li>
-            <li>
-              <span class="h-title">Dedicated elevators</span>
-              <span class="h-desc">For all apartments</span>
-            </li>
-            <li>
-              <span class="h-title">Designed by BENOY</span>
-              <span class="h-desc">Internationally renowned Singapore based architect</span>
-            </li>
-            <li>
-              <span class="h-title">The Gem Clubhouse</span>
-              <span class="h-desc">Leisure & exclusive experiences</span>
-            </li>
-            <li>
-              <span class="h-title">Amenities at 3 levels</span>
-              <span class="h-desc">Ground, 1st podium & 2nd podium in a cascade</span>
-            </li>
-            <li>
-              <span class="h-title">Panoramic view</span>
-              <span class="h-desc">Of the millennium city</span>
+              <span class="h-title">Ultra Luxury</span>
+              <span class="h-desc">Specification</span>
             </li>
           </ul>
         </div>
@@ -296,14 +325,19 @@
             </thead>
             <tbody>
               <tr>
-                <td>3.5 BHK</td>
-                <td>2780 SQ.FT</td>
-                <td class="text-end price-accent">₹ 4.72 Cr</td>
+                <td>3 BHK</td>
+                <td>2095 SQ.FT</td>
+                <td class="text-end price-accent">Call for Price</td>
               </tr>
               <tr>
-                <td>4.5 BHK</td>
-                <td>3780 SQ.FT</td>
-                <td class="text-end price-accent">₹ 6.21 Cr</td>
+                <td>3 BHK + Utility</td>
+                <td>2280 SQ.FT</td>
+                <td class="text-end price-accent">Call for Price</td>
+              </tr>
+              <tr>
+                <td>4 BHK + Utility</td>
+                <td>3480 SQ.FT</td>
+                <td class="text-end price-accent">Call for Price</td>
               </tr>
             </tbody>
           </table>
@@ -313,16 +347,23 @@
         <div class="pricing-cards d-md-none">
           <div class="pricing-card">
             <div class="pc-body">
-              <div class="pc-unit">3.5 BHK</div>
-              <div class="pc-size">2780 SQ.FT</div>
-              <div class="pc-price">₹ 4.72 Cr</div>
+              <div class="pc-unit">3 BHK</div>
+              <div class="pc-size">2095 SQ.FT</div>
+              <div class="pc-price">Call for Price</div>
             </div>
           </div>
           <div class="pricing-card">
             <div class="pc-body">
-              <div class="pc-unit">4.5 BHK</div>
-              <div class="pc-size">3780 SQ.FT</div>
-              <div class="pc-price">₹ 6.21 Cr</div>
+              <div class="pc-unit">3 BHK + Utility</div>
+              <div class="pc-size">2280 SQ.FT</div>
+              <div class="pc-price">Call for Price</div>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pc-body">
+              <div class="pc-unit">4 BHK + Utility</div>
+              <div class="pc-size">3480 SQ.FT</div>
+              <div class="pc-price">Call for Price</div>
             </div>
           </div>
         </div>
@@ -334,7 +375,7 @@
     <section id="floorplan" class="floor-section py-5">
       <div class="container">
         <div class="text-center mb-4 mb-md-5">
-          <h2 class="floor-title">Expansive Layouts designed for Modern Indian Families</h2>
+          <h2 class="floor-title">Signature Global Cloverdale SPR — Floor Plans</h2>
           <div class="floor-tabs d-inline-flex align-items-center gap-2 mt-3" role="tablist" aria-label="Floor and Site Plans">
             <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-floor" id="tabBtnFloor">Floor Plan</button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-site" id="tabBtnSite">Site Plan</button>
@@ -353,12 +394,12 @@
                   <div class="overlay-card">
                     <div class="overlay-header">
                       <span class="overlay-title">3 BHK + UTILITY</span>
-                      <span class="overlay-size">(2920 sq.ft.)</span>
+                      <span class="overlay-size">(2280 sq.ft.)</span>
                     </div>
                     <div class="plan-box">
                       <img src="images/3bhk-floorplan.webp" alt="3 BHK + Utility Floor Plan" class="img-fluid plan-img open-plan" data-img="images/3bhk-floorplan.webp"/>
                     </div>
-                    <a href="#" class="plan-link open-plan" data-img="images/3bhk-floorplan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>Discover Enlarged 3 BHK Apartments</a>
+                    <a href="#" class="plan-link open-plan" data-img="images/3bhk-floorplan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>3 BHK & 3 BHK + Utility — Floor Plan</a>
                   </div>
                 </article>
               </div>
@@ -368,13 +409,13 @@
                   <div class="floor-hero" style="background-image:url('images/background_imag.webp');"></div>
                   <div class="overlay-card">
                     <div class="overlay-header">
-                      <span class="overlay-title">4.5 BHK + UTILITY</span>
-                      <span class="overlay-size">(3930 sq.ft.)</span>
+                      <span class="overlay-title">4 BHK + UTILITY</span>
+                      <span class="overlay-size">(3480 sq.ft.)</span>
                     </div>
                     <div class="plan-box">
                       <img src="images/4bhk-floorplan.webp" alt="4.5 BHK + Utility Floor Plan" class="img-fluid plan-img open-plan" data-img="images/4bhk-floorplan.webp"/>
                     </div>
-                    <a href="#" class="plan-link open-plan" data-img="images/4bhk-floorplan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>Discover Enlarged 4.5 BHK Apartments</a>
+                    <a href="#" class="plan-link open-plan" data-img="images/4bhk-floorplan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>4 BHK + Utility — Floor Plan</a>
                   </div>
                 </article>
               </div>
@@ -399,6 +440,78 @@
       </div>
     </section>
     <section id="location"></section>
+    
+    <!-- Location Advantages Section -->
+    <section id="location-advantages" class="locadv-section">
+      <div class="locadv-container">
+        <div class="locadv-header text-center">
+          <h2 class="locadv-title">Location Benefits – Sector 71, SPR Gurgaon</h2>
+          <p class="locadv-subtitle">Prime location on SPR in Sector 71, Gurugram with seamless connectivity to workplaces, lifestyle hubs, and healthcare — convenience at your doorstep.</p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="locadv-map-wrapper">
+        <div class="locadv-map">
+          <iframe title="Sector 71 Map"
+            src="https://www.google.com/maps?q=Sector+71,+Gurugram+Southern+Peripheral+Road&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Floating Cards (overlapping the map) -->
+      <div class="locadv-cards">
+        <div class="locadv-grid">
+          <!-- Educational Institutions -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Educational Institutions</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>CD International School – 2 mins</li>
+              <li>Vega School – 5 mins</li>
+              <li>Blue Bells Model School – 12 mins</li>
+              <li>GEMS International School – 15 mins</li>
+            </ol>
+          </div>
+
+          <!-- Connectivity -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Connectivity</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Dwarka Expressway – 2 mins</li>
+              <li>NH-48 – 15 mins</li>
+              <li>IGI Airport – 25 mins</li>
+              <li>Proposed Metro – 5 mins</li>
+            </ol>
+          </div>
+
+          <!-- Leisure -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Leisure</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Ambience Mall – 25 mins</li>
+              <li>CyberHub – 25 mins</li>
+              <li>Sector 70 Market – 5 mins</li>
+              <li>M3M Cosmopolitan – 8 mins</li>
+            </ol>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Healthcare</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Park Hospital – 10 mins</li>
+              <li>CK Birla Hospital – 12 mins</li>
+              <li>Medanta Medicity – 30 mins</li>
+              <li>Local Clinics – 3–6 mins</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQs Section -->
     <section id="faq" class="faq-section py-5">
@@ -411,47 +524,47 @@
               <div class="faq-item">
                 <button class="faq-q" aria-expanded="true">
                   <span class="q-prefix">Q:</span>
-                  What is the Landmark Skyvue location?
+                  Where is Signature Global Cloverdale SPR located?
                 </button>
                 <div class="faq-a open">
-                  <p>Located in Dwarka Expressway, Sector 103, Gurgaon, with easy connectivity to major roads and proximity to schools, shopping malls, and hospitals.</p>
+                  <p>Sector 71, Southern Peripheral Road (SPR), Gurugram — a prime address with excellent connectivity to workplaces, lifestyle hubs, schools, and healthcare.</p>
                 </div>
               </div>
               <!-- Item 2 -->
               <div class="faq-item">
                 <button class="faq-q" aria-expanded="false">
                   <span class="q-prefix">Q:</span>
-                  What is the RERA number of Landmark Skyvue?
+                  What is the current project status?
                 </button>
                 <div class="faq-a">
-                  <p>The project's RERA details will be shared upon request. Please contact our team for the latest official information.</p>
+                  <p>Booking Open. Please reach out for the latest availability and offers.</p>
                 </div>
               </div>
               <!-- Item 3 -->
               <div class="faq-item">
                 <button class="faq-q" aria-expanded="false">
                   <span class="q-prefix">Q:</span>
-                  When is the expected delivery of the project?
+                  What unit types and sizes are available?
                 </button>
                 <div class="faq-a">
-                  <p>Expected delivery timelines are available in the brochure. Reach out via the enquiry form for exact dates.</p>
+                  <p>Spacious 3 BHK, 3 BHK + Utility, and 4 BHK + Utility residences ranging from approx. 2095 to 3480 sq.ft.</p>
                 </div>
               </div>
               <!-- Item 4 -->
               <div class="faq-item">
                 <button class="faq-q" aria-expanded="false">
                   <span class="q-prefix">Q:</span>
-                  What unit types are offered?
+                  Does the project have any green certifications?
                 </button>
                 <div class="faq-a">
-                  <p>Spacious 3 BHK, 3.5 BHK, and 4.5 BHK configurations with utility spaces designed for modern families.</p>
+                  <p>Yes. Cloverdale SPR is IGBC Platinum precertified and rated EDGE Advanced, reflecting a strong commitment to sustainable development.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="faq-side-image ratio ratio-4x3 rounded-3 overflow-hidden">
-              <img src="images/hero.svg" alt="Residences lifestyle" class="w-100 h-100 object-fit-cover" />
+              <img src="images/faq.png" alt="Residences lifestyle" class="w-100 h-100 object-fit-cover" />
             </div>
           </div>
         </div>
@@ -478,7 +591,7 @@
               The company commenced its operations in 2014 through its subsidiary, Signature Global Private Limited, with the launch of our Solera project on 6.13 acres of land in Gurugram, Haryana. We have grown our operations over the years and in less than a decade, and as of March 31, 2022, we had sold 23,453 residential and commercial units, all within the Delhi NCR region, with an aggregate Saleable Area of 14.59 million square feet.
             </p>
             <div class="about-image ratio ratio-21x9 rounded-3 overflow-hidden">
-              <img src="images/hero.svg" alt="Signature Global residences" class="w-100 h-100 object-fit-cover" />
+              <img src="images/about.png" alt="Signature Global residences" class="w-100 h-100 object-fit-cover" />
             </div>
           </div>
         </div>
