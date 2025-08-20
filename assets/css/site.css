@@ -57,7 +57,7 @@ body {
 .view-all { font-weight: 700; color: #012465; text-decoration: none; border-bottom: 2px solid transparent; }
 .view-all:hover { border-bottom-color: currentColor; }
 
-/* Luxury cards (scoped) */
+/* Luxury cards (scoped) scope bhai  */
 .lux-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.5vw, 28px); align-items: stretch; }
 @media (max-width: 640px) {
   .lux-grid { grid-template-columns: 1fr; }
