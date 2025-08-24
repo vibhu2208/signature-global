@@ -8,27 +8,98 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="./">
-        <img src="Cloverdale/images/sg-logo.jpg" alt="Signature Global Logo" />
-        <span>Signature Global</span>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="Cloverdale/images/sg-logo.jpg" alt="Signature Global" class="logo-img">
       </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/properties">Properties</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:9811750130" class="phone-number">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>+91 98117 50130</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="luxury-hero">
+    <!-- Callback Button with Glass Effect -->
+    <div class="header-actions">
+      <button class="callback-btn glass-effect">
+        <span>Request a Callback</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Tagline -->
+    <div class="tagline">Realty executes international interior excellence since 1985</div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1>Discover Your Dream Home</h1>
+      <p>Experience luxury living at its finest with our exclusive properties</p>
+      
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" id="propertySearch" placeholder="Search by property name, location, or type..." class="search-input">
+          <button class="search-button" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Quick Search Options -->
+        <div class="quick-search-options">
+          <span class="quick-search-label">Quick Search:</span>
+          <button class="quick-search-tag" data-search="Industrial Plots">Industrial Plots</button>
+          <button class="quick-search-tag" data-search="Premium Property">Premium Property</button>
+          <button class="quick-search-tag" data-search="Independent Floors">Independent Floors</button>
+          <button class="quick-search-tag" data-search="SCO Plots">SCO Plots</button>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabulous Headline Section -->
+  <section class="fabulous-section">
     <div class="container">
-      <h1>Discover Our Properties</h1>
-      <p>Explore premium developments with world-class design, amenities, and connectivity.</p>
+      <h2 class="fabulous-headline">Signature Global</h2>
+      <div class="fabulous-content">
+        <div class="fabulous-left">
+          <p>Your housing needs deserve the care of a specialist, be home</p>
+        </div>
+        <div class="fabulous-right">
+          <p>Let's go above and beyond to find your next home</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -864,5 +935,6 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+  <script src="assets/js/search.js"></script>
 </body>
 </html>

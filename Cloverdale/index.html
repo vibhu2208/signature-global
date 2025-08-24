@@ -509,6 +509,56 @@
       </div>
     </section>
 
+    <!-- Master Plan Section -->
+    <section id="master-plan" class="masterplan-section py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Master Plan</h2>
+          <div class="section-divider mx-auto my-3"></div>
+          <p class="section-subtitle">Discover the thoughtfully designed layout of Signature Global Cloverdale SPR</p>
+        </div>
+        <div class="masterplan-container">
+          <img src="images/master-plan-cloverdale.webp" 
+               alt="Master Plan of Signature Global Cloverdale SPR" 
+               class="masterplan-img img-fluid rounded-3 shadow" 
+               id="masterplanImage" />
+          <div class="masterplan-overlay">
+            <button class="btn btn-light btn-expand" id="expandMasterplan">
+              <i class="fas fa-expand"></i> Expand
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Expanded View -->
+    <div class="modal fade" id="masterplanModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Master Plan - Signature Global Cloverdale SPR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img src="images/master-plan-cloverdale.webp" 
+                 alt="Expanded Master Plan" 
+                 class="img-fluid" 
+                 style="max-height: 80vh; width: auto;" />
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              <i class="fas fa-times me-2"></i>Close
+            </button>
+            <a href="images/master-plan-cloverdale.webp" 
+               class="btn btn-primary" 
+               download="Signature-Global-Cloverdale-Master-Plan">
+              <i class="fas fa-download me-2"></i>Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FAQs Section -->
     <section id="faq" class="faq-section py-5">
       <div class="container">
@@ -611,6 +661,33 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Master Plan Expand Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const masterplanContainer = document.querySelector('.masterplan-container');
+      const expandButton = document.getElementById('expandMasterplan');
+      const masterplanModal = new bootstrap.Modal(document.getElementById('masterplanModal'));
+      
+      // Open modal when clicking the container or button
+      [masterplanContainer, expandButton].forEach(element => {
+        if (element) {
+          element.addEventListener('click', function(e) {
+            e.stopPropagation();
+            masterplanModal.show();
+          });
+        }
+      });
+      
+      // Prevent modal from closing when clicking inside the modal content
+      const modalContent = document.querySelector('#masterplanModal .modal-content');
+      if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    });
+  </script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
