@@ -1157,22 +1157,6 @@
     .locadv-subtitle {
       font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: #555; /* Gray */
-      font-weight: 600;
-      margin-top: 10px;
-      font-size: clamp(14px, 1.8vw, 16px);
-    }
-  
-    /* Map */
-    .locadv-map-wrapper { width: calc(min(1200px, 92vw) * 0.9); margin: 0 auto; }
-    .locadv-map { position: relative; width: 100%; border-radius: 18px; overflow: hidden; box-shadow: 0 16px 38px rgba(0,0,0,0.12); }
-    .locadv-map::before { content: ""; display: block; padding-top: 56.25%; }
-    .locadv-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  
-    /* Floating cards overlapping map bottom */
-    .locadv-cards {
-      position: relative;
-      width: calc(min(1200px, 92vw) * 0.88); /* slightly wider: 88% of map width */
-      margin: calc(-1 * clamp(80px, 12vw, 160px)) auto 0; /* move further up over the map */
       background:
         linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.96)),
         repeating-linear-gradient(135deg, rgba(13,27,62,0.04) 0, rgba(13,27,62,0.04) 8px, transparent 8px, transparent 16px);
@@ -1197,3 +1181,21 @@
   
     .locadv-list { margin: 0; padding-left: 20px; font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #555; font-weight: 600; display: grid; gap: 6px; }
     .locadv-list li { line-height: 1.6; }
+
+    /* Map */
+    .locadv-map-wrapper { width: calc(min(1200px, 92vw) * 0.9); margin: 0 auto; }
+    .locadv-map { position: relative; width: 100%; border-radius: 18px; overflow: hidden; box-shadow: 0 16px 38px rgba(0,0,0,0.12); }
+    .locadv-map img { width: 100%; height: auto; display: block; }
+
+    /* Floating cards overlapping map bottom */
+    .locadv-cards {
+      position: relative;
+      width: calc(min(1200px, 92vw) * 0.88);
+      margin: calc(-1 * clamp(80px, 12vw, 160px)) auto 0;
+      z-index: 10;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.96)), repeating-linear-gradient(135deg, rgba(13,27,62,0.04) 0, rgba(13,27,62,0.04) 8px, transparent 8px, transparent 16px);
+      border-radius: 18px;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.14);
+      border: 1px solid #eef1f6;
+      padding: clamp(18px, 3vw, 32px);
+    }
