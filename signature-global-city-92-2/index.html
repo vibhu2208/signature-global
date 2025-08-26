@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature Global City 92-2 - Sector 92, Gurgaon</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- Modern UI font for sections like Pricing -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="logoslide">
+      <img src="../assets/images/icons/loader.svg" alt="Logo" />
+    </div>
+    <div id="brand-text">Signature Global</div>
+    <div id="loading-text">Loading...</div>
+    <div id="percent">0%</div>
+  </div>
+
+  <div id="page" class="page">
+    <!-- Header / Navbar -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-5 d-flex align-items-center">
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2 order-1" href="../index.html">
+            <img src="../assets/images/global/sg-logo.jpg" alt="Logo" height="40">
+          </a>
+
+          <!-- Collapsible Nav (centered items) -->
+          <div class="collapse navbar-collapse order-lg-2 flex-grow-1" id="nav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+              <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#floorplan">Floor Plan</a></li>
+              <li class="nav-item"><a class="nav-link" href="#location">Location Map</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Desktop Call Button (far right on lg+) -->
+          <a href="tel:+919811750130" class="call-btn d-none d-lg-inline-flex order-lg-3 ms-lg-3" aria-label="Call +91 98117 50130">
+            <i class="fa-solid fa-phone"></i>
+            <span class="cb-text">+91 98117 50130</span>
+          </a>
+
+          <!-- Hamburger (mobile) -->
+          <button class="navbar-toggler ms-2 order-3" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Mobile Call Button (top-right on < lg) -->
+          <a href="tel:+919811750130" class="call-btn call-btn-sm d-inline-flex d-lg-none ms-auto order-3" aria-label="Call +91 98117 50130">
+            <i class="fa-solid fa-phone"></i>
+            <span class="cb-text">+91 98117 50130</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section (Image) -->
+    <section id="hero" class="hero">
+      <img src="images/global-city-92-2-banner.avif" alt="Hero Background" class="hero-img">
+    </section>
+    
+    <!-- Quick Info (floating cards above About) -->
+    <section class="quickinfo-section" aria-label="Project Quick Info">
+      <div class="quickinfo-container">
+        <div class="qi-grid">
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+            <div class="qi-label">Property Type</div>
+            <div class="qi-value">Low Rise Luxury Floors</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <div class="qi-label">Location</div>
+            <div class="qi-value">Sector 92 Gurgaon</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i></div>
+            <div class="qi-label">Price</div>
+            <div class="qi-value">Call for Price</div>
+          </div>
+          <div class="qi-card">
+            <div class="qi-icon"><i class="fa-solid fa-door-open" aria-hidden="true"></i></div>
+            <div class="qi-label">Unit Type</div>
+            <div class="qi-value">2 & 3 BHK | 1010 - 1190 SQ.FT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h2 class="about-heading">
+          Signature Global City 92-2 - Sector 92, Gurgaon
+        </h2>
+
+        <h3 class="about-sub">Project Overview</h3>
+        <p>
+          Rediscover a good lifestyle in 8.3125 acres; enjoy a well-connected life with proximity to major highways. This residential complex is a certified green building and constructed with eco-friendly technology and practices.
+        </p>
+
+        <p>
+          Here, you can rejuvenate in nature's freshness and enjoy a touch of serenity. To make your life more comfortable and hassle-free, we provide world class amenities while ensuring high-end security.
+        </p>
+        
+        <p>
+          Interior Styling by Sonali Bhagwati.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Highlights Section -->
+    <section id="highlights" class="highlights-section">
+      <div class="highlights-grid">
+        <!-- Single Hero Image -->
+        <div class="highlight-slice"><img src="../assets/images/icons/highlight.svg" alt="Project Highlight"></div>
+
+        <!-- Text Column -->
+        <div class="highlights-text">
+          <h3 class="highlights-heading">Project Highlights</h3>
+          <ul class="highlights-list">
+            <li>
+              <span class="h-title">Booking Open</span>
+              <span class="h-desc">Project Status</span>
+            </li>
+            <li>
+              <span class="h-title">Low Rise Luxury Floors</span>
+              <span class="h-desc">Property Type</span>
+            </li>
+            <li>
+              <span class="h-title">Sector 92 Gurgaon</span>
+              <span class="h-desc">Location</span>
+            </li>
+            <li>
+              <span class="h-title">2 & 3 BHK</span>
+              <span class="h-desc">Unit Types</span>
+            </li>
+            <li>
+              <span class="h-title">1010 - 1190 SQ.FT</span>
+              <span class="h-desc">Sizes</span>
+            </li>
+            <li>
+              <span class="h-title">Luxury Floors</span>
+              <span class="h-desc">Luxury Living</span>
+            </li>
+            <li>
+              <span class="h-title">World Class Amenities</span>
+              <span class="h-desc">Amenities</span>
+            </li>
+            <li>
+              <span class="h-title">Eco-Friendly Construction</span>
+              <span class="h-desc">Green Building</span>
+            </li>
+            <li>
+              <span class="h-title">Interior Styling by Sonali Bhagwati</span>
+              <span class="h-desc">Professional Design</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Project Gallery) -->
+    <section id="gallery" class="project_gallery py-5 bg-light">
+      <div class="gallery-header mb-5 text-center">
+        <h2 class="gallery-title mb-2">Project Gallery</h2>
+        <span class="gallery-underline"></span>
+        <p class="gallery-subtitle mt-3">Experience real space for real luxury with expansive residences — where grandeur meets comfort</p>
+      </div>
+
+      <div class="gallery_container">
+        <!-- Main Slider (Left / Top) -->
+        <div class="swiper-container main-slider loading">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 - Gallery Image 1 -->
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-01.webp')">
+                <img src="images/gallery-global-city-92-2-01.webp" class="entity-img" alt="Global City 92-2 Gallery 01"/>
+              </figure>
+              <div class="content">
+                <p class="title">Global City 92-2 Gallery 01</p>
+                <span class="caption">Project Gallery</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 - Gallery Image 2 -->
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-02.webp')">
+                <img src="images/gallery-global-city-92-2-02.webp" class="entity-img" alt="Global City 92-2 Gallery 02"/>
+              </figure>
+              <div class="content">
+                <p class="title">Global City 92-2 Gallery 02</p>
+                <span class="caption">Project Gallery</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 - Gallery Image 3 -->
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-03.webp')">
+                <img src="images/gallery-global-city-92-2-03.webp" class="entity-img" alt="Global City 92-2 Gallery 03"/>
+              </figure>
+              <div class="content">
+                <p class="title">Global City 92-2 Gallery 03</p>
+                <span class="caption">Project Gallery</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 - Project Logo -->
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/Signature Global City 92-2.webp')">
+                <img src="images/Signature Global City 92-2.webp" class="entity-img" alt="Signature Global City 92-2"/>
+              </figure>
+              <div class="content">
+                <p class="title">Signature Global City 92-2</p>
+                <span class="caption">Project Gallery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nav arrows for main slider -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Thumbnail Slider (Right / Bottom) -->
+        <div class="swiper-container nav-slider loading">
+          <div class="swiper-wrapper" role="navigation">
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-01.webp')">
+                <img src="images/gallery-global-city-92-2-01.webp" class="entity-img" alt="Global City 92-2 Gallery 01"/>
+              </figure>
+              <div class="content"><p class="title">Global City 92-2 Gallery 01</p></div>
+            </div>
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-02.webp')">
+                <img src="images/gallery-global-city-92-2-02.webp" class="entity-img" alt="Global City 92-2 Gallery 02"/>
+              </figure>
+              <div class="content"><p class="title">Global City 92-2 Gallery 02</p></div>
+            </div>
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/gallery-global-city-92-2-03.webp')">
+                <img src="images/gallery-global-city-92-2-03.webp" class="entity-img" alt="Global City 92-2 Gallery 03"/>
+              </figure>
+              <div class="content"><p class="title">Global City 92-2 Gallery 03</p></div>
+            </div>
+            <div class="swiper-slide">
+              <figure class="slide-bgimg" style="background-image:url('images/Signature Global City 92-2.webp')">
+                <img src="images/Signature Global City 92-2.webp" class="entity-img" alt="Signature Global City 92-2"/>
+              </figure>
+              <div class="content"><p class="title">Signature Global City 92-2</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview"></section>
+    
+    <!-- Sizes and Price List -->
+    <section id="pricing" class="pricing-section py-5">
+      <div class="container">
+        <div class="text-center mb-4 mb-md-5">
+          <h2 class="pricing-title">Sizes and Price List</h2>
+          <span class="pricing-underline"></span>
+        </div>
+
+        <!-- Desktop/Table view -->
+        <div class="table-responsive pricing-table-wrap d-none d-md-block">
+          <table class="table pricing-table mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Unit Type</th>
+                <th scope="col">Size (SQ.FT)</th>
+                <th scope="col" class="text-end">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2 BHK</td>
+                <td>1010 SQ.FT</td>
+                <td class="text-end price-accent">Call for Price</td>
+              </tr>
+              <tr>
+                <td>3 BHK</td>
+                <td>1190 SQ.FT</td>
+                <td class="text-end price-accent">Call for Price</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile/Card view -->
+        <div class="pricing-cards d-md-none">
+          <div class="pricing-card">
+            <div class="pc-body">
+              <div class="pc-unit">2 BHK</div>
+              <div class="pc-size">1010 SQ.FT</div>
+              <div class="pc-price">Call for Price</div>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pc-body">
+              <div class="pc-unit">3 BHK</div>
+              <div class="pc-size">1190 SQ.FT</div>
+              <div class="pc-price">Call for Price</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="amenities"></section>
+    
+    <!-- Floor Plan Section -->
+    <section id="floorplan" class="floor-section py-5">
+      <div class="container">
+        <div class="text-center mb-4 mb-md-5">
+          <h2 class="floor-title">Signature Global City 92-2 — Floor Plans</h2>
+          <div class="floor-tabs d-inline-flex align-items-center gap-2 mt-3" role="tablist" aria-label="Floor and Site Plans">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-floor" id="tabBtnFloor">Floor Plan</button>
+            
+          </div>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="tab-content">
+          <!-- Floor Plan Panel -->
+          <div id="tab-floor" class="tab-panel fade show active" role="tabpanel" aria-labelledby="tabBtnFloor">
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="floor-card h-100">
+                  <div class="floor-hero" style="background-image:url('../assets/images/global/background_imag.webp');"></div>
+                  <div class="overlay-card">
+                    <div class="overlay-header">
+                      <span class="overlay-title">2 BHK Floor Plan</span>
+                    
+                    </div>
+                    <div class="plan-box">
+                      <img src="images/type-a-signature-global-city92-2-floor-plan.webp" alt="2 BHK Floor Plan" class="img-fluid plan-img open-plan" data-img="images/type-a-signature-global-city92-2-floor-plan.webp"/>
+                    </div>
+                    <a href="#" class="plan-link open-plan" data-img="images/type-a-signature-global-city92-2-floor-plan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>2 BHK— Floor Plan</a>
+                  </div>
+                </article>
+              </div>
+              <!-- Card 2 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="floor-card h-100">
+                  <div class="floor-hero" style="background-image:url('../assets/images/global/background_imag.webp');"></div>
+                  <div class="overlay-card">
+                    <div class="overlay-header">
+                      <span class="overlay-title">3 BHK - Layout 1</span>
+                      
+                    </div>
+                    <div class="plan-box">
+                      <img src="images/type-b-signature-global-city92-2-floor-plan.webp" alt="3 BHK Floor Plan" class="img-fluid plan-img open-plan" data-img="images/type-b-signature-global-city92-2-floor-plan.webp"/>
+                    </div>
+                    <a href="#" class="plan-link open-plan" data-img="images/type-b-signature-global-city92-2-floor-plan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>3 BHK - Layout 1— Floor Plan</a>
+                  </div>
+                </article>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="floor-card h-100">
+                  <div class="floor-hero" style="background-image:url('../assets/images/global/background_imag.webp');"></div>
+                  <div class="overlay-card">
+                    <div class="overlay-header">
+                      <span class="overlay-title">3 BHK - Layout 2</span>
+                      
+                    </div>
+                    <div class="plan-box">
+                      <img src="images/type-b-signature-global-city92-2-floor-plan.webp" alt="3 BHK Layout 2 Floor Plan" class="img-fluid plan-img open-plan" data-img="images/type-b-signature-global-city92-2-floor-plan.webp"/>
+                    </div>
+                    <a href="#" class="plan-link open-plan" data-img="images/type-b-signature-global-city92-2-floor-plan.webp"><i class="fa-solid fa-magnifying-glass me-2"></i>3 BHK - Layout 2— Floor Plan</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Site Plan Panel -->
+          <div id="tab-site" class="tab-panel fade" role="tabpanel" aria-labelledby="tabBtnSite" hidden>
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10">
+                <div class="plan-box mb-2">
+                  <img src="images/site-plan.png" alt="Site Plan" class="img-fluid plan-img" />
+                </div>
+                <p class="text-center text-muted small">Explore the overall site layout, green spaces, amenities, and access points.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating CTA (Optional) -->
+        <a href="#contact" class="btn floor-cta" aria-label="Enquire Now">Enquire Now</a>
+      </div>
+    </section>
+    <section id="location"></section>
+    
+    <!-- Location Advantages Section -->
+    <section id="location-advantages" class="locadv-section">
+      <div class="locadv-container">
+        <div class="locadv-header text-center">
+          <h2 class="locadv-title">Location Benefits – Sector 92, Gurgaon</h2>
+          <p class="locadv-subtitle">Prime location in Sector 92, Gurgaon with seamless connectivity to workplaces, lifestyle hubs, and healthcare — convenience at your doorstep.</p>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="locadv-map-wrapper">
+        <div class="locadv-map">
+          <img src="images/location-global-city-92-2.webp" alt="Sector 92 Gurgaon Location Map" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </div>
+
+      <!-- Floating Cards (overlapping the map) -->
+      <div class="locadv-cards">
+        <div class="locadv-grid">
+          <!-- Educational Institutions -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Educational Institutions</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Pranavananda International School – ~5 min</li>
+              <li>RPS International School – ~9 min</li>
+              <li>Yaduvanshi Shiksha Niketan – within Sector 92</li>
+              <li>GD International School – within Sector 92</li>
+            </ol>
+          </div>
+
+          <!-- Connectivity -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Connectivity</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Cyber City, Udyog Vihar, Golf Course Ext. Road – ~25–30 min drive</li>
+              <li>Kadipur industrial area & Manesar – nearby industrial clusters</li>
+              <li>Dwarka Expressway – ~5 km away (future rapid corridor to Delhi)</li>
+              <li>Gurgaon Railway Station – ~16 km</li>
+              <li>IGI Airport – ~32 km</li>
+              <li>Access via Pataudi Road, NH-48, WPE & SPR</li>
+            </ol>
+          </div>
+
+          <!-- Leisure -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Leisure & Surroundings</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Vatika Town Square Mall – ~14 min</li>
+              <li>Sapphire 83 Mall – nearby retail & entertainment</li>
+              <li>Crescent Drive Park – scenic green space within sector</li>
+              <li>Emerging residential neighbourhoods – abundant greenery</li>
+            </ol>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="locadv-col">
+            <h3 class="locadv-col-title">Healthcare</h3>
+            <span class="locadv-underline"></span>
+            <ol class="locadv-list">
+              <li>Genesis Hospital – nearby</li>
+              <li>Arc Multispeciality Hospital – nearby</li>
+              <li>Medeor Hospital – accessible</li>
+              <li>Medanta – The Medicity – within broader healthcare network</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Plan Section -->
+    <section id="master-plan" class="masterplan-section py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Master Plan</h2>
+          <div class="section-divider mx-auto my-3"></div>
+          <p class="section-subtitle">Discover the thoughtfully designed layout of Signature Global City 92-2</p>
+        </div>
+        <div class="masterplan-container">
+          <img src="images/master-plan-global-city-92-2.webp" 
+               alt="Master Plan of Signature Global City 92-2" 
+               class="masterplan-img img-fluid rounded-3 shadow" 
+               id="masterplanImage" />
+          <div class="masterplan-overlay">
+            <button class="btn btn-light btn-expand" id="expandMasterplan">
+              <i class="fas fa-expand"></i> Expand
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Expanded View -->
+    <div class="modal fade" id="masterplanModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Master Plan - Signature Global City 92-2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img src="images/master-plan-global-city-92-2.webp" 
+                 alt="Expanded Master Plan" 
+                 class="img-fluid" 
+                 style="max-height: 80vh; width: auto;" />
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              <i class="fas fa-times me-2"></i>Close
+            </button>
+            <a href="images/master-plan-global-city-92-2.webp" 
+               class="btn btn-primary" 
+               download="Signature-Global-City-92-2-Master-Plan">
+              <i class="fas fa-download me-2"></i>Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQs Section -->
+    <section id="faq" class="faq-section py-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="faq-title mb-4">FAQs</h2>
+            <div class="faq-accordion">
+              <!-- Item 1 -->
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="true">
+                  <span class="q-prefix">Q:</span>
+                  Where is Signature Global City 92-2 located?
+                </button>
+                <div class="faq-a open">
+                  <p>Sector 92, Gurgaon — a prime address with excellent connectivity to workplaces, lifestyle hubs, schools, and healthcare.</p>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span class="q-prefix">Q:</span>
+                  What is the current project status?
+                </button>
+                <div class="faq-a">
+                  <p>Booking Open. Please reach out for the latest availability and offers.</p>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span class="q-prefix">Q:</span>
+                  What unit types and sizes are available?
+                </button>
+                <div class="faq-a">
+                  <p>Spacious 2 BHK (1010 SQ.FT) and 3 BHK (1190 SQ.FT) low rise luxury floors with eco-friendly construction and world-class amenities.</p>
+                </div>
+              </div>
+              <!-- Item 4 -->
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                  <span class="q-prefix">Q:</span>
+                  Does the project have any green certifications?
+                </button>
+                <div class="faq-a">
+                  <p>Yes. Signature Global City 92-2 is a certified green building with eco-friendly construction, world-class amenities, and interior styling by Sonali Bhagwati.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="faq-side-image ratio ratio-4x3 rounded-3 overflow-hidden">
+              <img src="../assets/images/global/faq.png" alt="Residences lifestyle" class="w-100 h-100 object-fit-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-lg-5 d-flex align-items-center h-100">
+            <div class="about-brand">
+              <img src="../assets/images/global/sg-logo.jpg" alt="Signature Global Logo" class="about-logo mb-3" />
+              <h2 class="about-title mb-2">About Signature Global</h2>
+              <p class="about-sub mb-0">Building homes for modern India</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <p class="about-text mb-3">
+              Signature Global is the Largest real estate development company in Delhi-NCR, focussed on affordable and mid segment housing (LIG and MIG) in terms of unit supplied (in the below Rs.80 lakh price category) between 2019 and 2021 with a market share of 19%.
+            </p>
+            <p class="about-text mb-4">
+              The company commenced its operations in 2014 through its subsidiary, Signature Global Private Limited, with the launch of our Solera project on 6.13 acres of land in Gurugram, Haryana. We have grown our operations over the years and in less than a decade, and as of March 31, 2022, we had sold 23,453 residential and commercial units, all within the Delhi NCR region, with an aggregate Saleable Area of 14.59 million square feet.
+            </p>
+            <div class="about-image ratio ratio-21x9 rounded-3 overflow-hidden">
+              <img src="../assets/images/global/about.png" alt="Signature Global residences" class="w-100 h-100 object-fit-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact"></section>
+  </div>
+
+  <!-- Floor Plan Modal -->
+  <div class="modal fade" id="planModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body pt-0">
+          <img id="planModalImg" src="" alt="Enlarged floor plan" class="img-fluid w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Master Plan Expand Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const masterplanContainer = document.querySelector('.masterplan-container');
+      const expandButton = document.getElementById('expandMasterplan');
+      const masterplanModal = new bootstrap.Modal(document.getElementById('masterplanModal'));
+      
+      // Open modal when clicking the container or button
+      [masterplanContainer, expandButton].forEach(element => {
+        if (element) {
+          element.addEventListener('click', function(e) {
+            e.stopPropagation();
+            masterplanModal.show();
+          });
+        }
+      });
+      
+      // Prevent modal from closing when clicking inside the modal content
+      const modalContent = document.querySelector('#masterplanModal .modal-content');
+      if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Loader + Sticky Navbar Script -->
+  <script>
+    const loader = document.getElementById('loader');
+    const percent = document.getElementById('percent');
+    const page = document.getElementById('page');
+    const header = document.querySelector('.header');
+    const navCollapse = document.getElementById('nav');
+    let count = 0;
+
+    // Fake loader progress
+    const interval = setInterval(() => {
+      count++;
+      percent.innerText = count + '%';
+      if (count >= 100) {
+        clearInterval(interval);
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          page.classList.add('visible');
+        }, 800);
+      }
+    }, 30);
+
+    // Ensure header is fixed and shadowed at all times (no background swap)
+    function applyShadow() {
+      if (window.scrollY > 2) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', applyShadow);
+    window.addEventListener('load', applyShadow);
+
+    // Floor plan enlarge modal
+    const planModalEl = document.getElementById('planModal');
+    const planModalImg = document.getElementById('planModalImg');
+    const planModal = planModalEl ? new bootstrap.Modal(planModalEl) : null;
+    document.querySelectorAll('.open-plan').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const src = el.getAttribute('data-img');
+        if (src && planModalImg && planModal) {
+          planModalImg.src = src;
+          planModal.show();
+        }
+      });
+    });
+
+    // FAQ accordion behavior
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item?.querySelector('.faq-a');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        // close all
+        document.querySelectorAll('.faq-q[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+
+        // open current if it was closed
+        if (!isOpen && answer) {
+          btn.setAttribute('aria-expanded', 'true');
+          answer.classList.add('open');
+        }
+      });
+    });
+
+    // Mobile menu UX: keep header style the same, prevent body scroll, close on outside click/ESC
+    if (navCollapse) {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+      let outsideHandler;
+
+      navCollapse.addEventListener('show.bs.collapse', () => {
+        document.body.classList.add('no-scroll');
+      });
+      navCollapse.addEventListener('shown.bs.collapse', () => {
+        // Close when clicking outside the navbar/collapse/toggler
+        outsideHandler = (e) => {
+          const isInsideNav = e.target.closest('.navbar');
+          if (!isInsideNav) {
+            collapseInstance.hide();
+          }
+        };
+        document.addEventListener('click', outsideHandler, { capture: true });
+        // Close on ESC
+        document.addEventListener('keydown', onEsc);
+      });
+      navCollapse.addEventListener('hidden.bs.collapse', () => {
+        document.body.classList.remove('no-scroll');
+        if (outsideHandler) document.removeEventListener('click', outsideHandler, { capture: true });
+        document.removeEventListener('keydown', onEsc);
+      });
+
+      function onEsc(ev) {
+        if (ev.key === 'Escape') collapseInstance.hide();
+      }
+    }
+  </script>
+
+  <!-- Project Gallery Swiper Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Selectors
+      const mainSliderSelector = '.main-slider';
+      const navSliderSelector  = '.nav-slider';
+      const interleaveOffset   = 0.01; // subtle parallax strength
+
+      // Main slider (one big image)
+      const mainSlider = new Swiper(mainSliderSelector, {
+      loop: true,
+      speed: 900,
+      autoplay: { delay:3000, disableOnInteraction: false },
+      loopAdditionalSlides: 13,
+      loopedSlides: 7,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      observer: true,
+      observeParents: true,
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      on: {
+        imagesReady() { this.el.classList.remove('loading'); },
+        slideChangeTransitionEnd() {
+          const captions = this.el.querySelectorAll('.caption');
+          captions.forEach(c => c.classList.remove('show'));
+          const active = this.slides[this.activeIndex]?.querySelector('.caption');
+          if (active) active.classList.add('show');
+        },
+        slideChange() {
+          // Keep thumbnails aligned to the real index when main wraps
+          if (typeof navSlider !== 'undefined') {
+            navSlider.slideToLoop(this.realIndex, 300, false);
+          }
+        },
+        // Smooth, single-sided parallax (only for forward progress)
+        progress() {
+          for (let i = 0; i < this.slides.length; i++) {
+            const slide = this.slides[i];
+            const p = slide.progress; // negative for previous, positive for next
+            const translate = Math.max(0, p) * this.width * interleaveOffset; // only move next/forward
+            const bg = slide.querySelector('.slide-bgimg');
+            if (bg) bg.style.transform = `translateX(${translate}px)`;
+          }
+        },
+        touchStart() {
+          for (let i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.transition = '';
+            const bg = this.slides[i].querySelector('.slide-bgimg');
+            if (bg) bg.style.transition = '';
+          }
+        },
+        setTransition(speed) {
+          for (let i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.transition = `${speed}ms`;
+            const bg = this.slides[i].querySelector('.slide-bgimg');
+            if (bg) bg.style.transition = `${speed}ms`;
+          }
+        }
+      }
+    });
+
+    // Thumbnail slider (3 visible, synced, vertical on desktop)
+    const navSlider = new Swiper(navSliderSelector, {
+      loop: true,
+      loopAdditionalSlides: 13,
+      loopedSlides: 7,
+      speed: 1000,
+      spaceBetween: 5,
+      slidesPerView: 3,
+      centeredSlides: false,
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+      direction: 'vertical',
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      observer: true,
+      observeParents: true,
+      on: {
+        imagesReady() { this.el.classList.remove('loading'); },
+        slideChange() {
+          // Align main to the real index when navigating thumbnails
+          if (typeof mainSlider !== 'undefined') {
+            mainSlider.slideToLoop(this.realIndex, 300, false);
+          }
+        }
+      },
+      breakpoints: {
+        0:   { direction: 'horizontal', slidesPerView: 3 },
+        640: { direction: 'horizontal', slidesPerView: 3 },
+        768: { direction: 'horizontal', slidesPerView: 3 },
+        992: { direction: 'vertical',   slidesPerView: 3 }
+      }
+    });
+
+    // Controller links not needed due to explicit syncing above
+    });
+  </script>
+
+  <!-- Floating Download Brochure Button -->
+  <a href="#" class="brochure-btn" aria-label="Download Brochure">
+    <i class="fa-solid fa-download"></i>
+    <span>DOWNLOAD BROCHURE</span>
+  </a>
+
+  <!-- Awesome Footer with Contact Form -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand">Signature Global</p>
+          <h3 class="footer-title">Experience Elevated Living</h3>
+          <p class="footer-text">Got questions or want to book a site visit? Send us your details and our team will reach out shortly.</p>
+          <ul class="footer-meta">
+            <li><i class="fa-solid fa-location-dot"></i> Sector 92, Gurugram</li>
+            <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fa-solid fa-envelope"></i> info@example.com</li>
+          </ul>
+        </div>
+        <div class="footer-form-wrap">
+          <form id="footerForm" class="footer-form" novalidate>
+            <div class="ff-row">
+              <div class="ff-group">
+                <label for="ffName">Name</label>
+                <input type="text" id="ffName" name="name" placeholder="Your full name" required />
+              </div>
+            </div>
+            <div class="ff-row two">
+              <div class="ff-group">
+                <label for="ffPhone">Phone</label>
+                <input type="tel" id="ffPhone" name="phone" inputmode="tel" pattern="[0-9\s+-]{8,15}" placeholder="e.g. +91 98 7654 3210" required />
+              </div>
+              <div class="ff-group">
+                <label for="ffEmail">Email</label>
+                <input type="email" id="ffEmail" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="ff-actions">
+              <button type="submit" class="ff-btn" aria-label="Send Enquiry">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Enquiry
+              </button>
+              <small class="ff-consent">By submitting, you agree to be contacted about this project.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Your Project. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer: dynamic year and simple form UX
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const footerForm = document.getElementById('footerForm');
+    if (footerForm) {
+      footerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('ffName');
+        const phone = document.getElementById('ffPhone');
+        const email = document.getElementById('ffEmail');
+        let valid = true;
+        [name, phone, email].forEach(inp => {
+          inp.classList.remove('is-invalid');
+          if (!inp.checkValidity()) { inp.classList.add('is-invalid'); valid = false; }
+        });
+        if (!valid) return;
+        // TODO: Integrate with backend/endpoint. For now, show a quick acknowledgment.
+        alert('Thank you! We\'ll contact you shortly.');
+        footerForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
