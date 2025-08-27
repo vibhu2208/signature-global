@@ -1,18 +1,25 @@
 /* Global site styles for multi-property listing */
+@import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap');
+
 :root {
   --brand: #0D1B3E;
   --accent: #72B139;
   --text: #1f2937;
   --muted: #6b7280;
   --bg: #f7f9fb;
+  --font-primary: 'TASA Orbiter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 body {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-primary);
   color: var(--text);
   background: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container { width: min(1200px, 92%); margin: 0 auto; }

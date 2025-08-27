@@ -641,7 +641,34 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+   
+  <!-- Brochure Download Handler -->
+  <script>
+    function handleBrochureDownload(event) {
+      event.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const email = document.getElementById('userEmail').value;
+      
+      // Here you can add your form submission logic
+      // For example, send data to a server or trigger a download
+      
+      // For demo purposes, we'll just show an alert and close the modal
+      alert('Thank you! The brochure will start downloading shortly.');
+      
+      // Close the modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('brochureModal'));
+      modal.hide();
+      
+      // Reset the form
+      document.getElementById('brochureForm').reset();
+      
+      // Trigger brochure download (replace with actual brochure URL)
+      window.open('images/Signature Global SCO 88A.webp', '_blank');
+    }
+  </script>
   <!-- Master Plan Expand Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {

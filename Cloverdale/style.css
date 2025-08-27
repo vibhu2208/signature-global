@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap');
+
 /* =====================
    Master Plan Section
    ===================== */
@@ -237,7 +239,7 @@
   }
   
   body {
-	font-family: "Playfair Display", serif;
+	font-family: var(--font-primary, sans-serif);
   }
   :root {
     /* Brand green palette */
@@ -248,7 +250,10 @@
     --primary-a-22: rgba(107, 184, 65, 0.22);
     --primary900-a-35: rgba(63, 122, 36, 0.35);
     --primary900-a-18: rgba(63, 122, 36, 0.18);
-  }
+  
+  --font-primary: 'TASA Orbiter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-secondary: 'TASA Orbiter', sans-serif;
+}
   /* Page fade-in after loader */
   .page { opacity: 0; transition: opacity 0.5s ease; }
   .page.visible { opacity: 1; }
@@ -678,7 +683,130 @@
     color: #555;
     font-weight: 500;
   }
+ /* Brochure Download Modal - Compact Design */
+ #brochureModal .modal-dialog {
+  max-width: 400px;
+}
 
+#brochureModal .modal-content {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#brochureModal .modal-header {
+  background: linear-gradient(135deg, #0D1B3E 0%, #1a3a7a 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+#brochureModal .modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#brochureModal .modal-title i {
+  font-size: 1.1em;
+}
+
+#brochureModal .btn-close {
+  filter: invert(1) brightness(2);
+  opacity: 0.8;
+  transition: all 0.2s;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  margin: 0;
+}
+
+#brochureModal .btn-close:hover {
+  opacity: 1;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+#brochureModal .modal-body {
+  padding: 1.5rem;
+}
+
+#brochureForm .form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#brochureForm .form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+#brochureForm .form-control {
+  padding: 0.65rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  background-color: #f8fafc;
+}
+
+#brochureForm .form-control:focus {
+  border-color: #0D1B3E;
+  box-shadow: 0 0 0 2px rgba(13, 27, 62, 0.1);
+  background-color: #fff;
+}
+
+#brochureForm .btn-download {
+  background: linear-gradient(135deg, #0D1B3E 0%, #1a3a7a 100%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#brochureForm .btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 27, 62, 0.15);
+}
+
+#brochureForm .btn-download:active {
+  transform: translateY(0);
+}
+
+#brochureForm .text-danger {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+#brochureForm .form-footer {
+  font-size: 0.75rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
   /* Responsive: stack images then text on tablet/mobile */
   @media (max-width: 991.98px) {
     .highlights-grid {
