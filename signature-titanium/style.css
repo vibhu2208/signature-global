@@ -1805,6 +1805,31 @@
   .navbar-collapse {
     display: none !important;
   }
+  
+  /* Hide desktop phone number to avoid duplicates */
+  .call-btn.d-none.d-lg-inline-flex {
+    display: none !important;
+  }
+  
+  /* Show only mobile phone number on right side */
+  .call-btn.d-inline-flex.d-lg-none {
+    display: inline-flex !important;
+    order: 3;
+    margin-left: auto;
+  }
+  
+  /* Logo on left side */
+  .navbar-brand {
+    order: 1;
+    margin-right: auto;
+  }
+  
+  /* Adjust container for proper left-right layout */
+  .navbar .container-fluid {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 /* =====================
    Mobile Hero Section Fix

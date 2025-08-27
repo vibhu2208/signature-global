@@ -689,34 +689,15 @@
         margin-bottom: 12px;
       }
     }
-  
-    /* Floating Download Brochure Button */
-    .brochure-btn {
-      position: fixed;
-      top: 50%;
-      right: 16px;
-      transform: translateY(-50%);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 10px;
-      background: var(--primary-100);
-      color: var(--primary-900);
-      border-radius: 999px;
-      box-shadow: 0 8px 22px var(--primary900-a-18);
-      text-decoration: none;
-      writing-mode: vertical-rl; /* vertical text */
+ /* vertical text */
       text-orientation: mixed;
       letter-spacing: 1px;
       font-weight: 700;
       z-index: 1100;
     }
-    .brochure-btn i { font-size: 1rem; margin-bottom: 8px; }
-    .brochure-btn span { font-size: 0.75rem; }
-    .brochure-btn:hover { background: #dff3e8; color: var(--primary-900); }
-  
-    /* Responsive adjustments for the floating button */
+
+
+/* Responsive adjustments for the floating button */
     @media (max-width: 991.98px) {
       /* Keep header appearance unchanged when menu opens */
       .header.menu-open {
@@ -793,18 +774,9 @@
       .navbar .collapse.show {
         box-shadow: 0 12px 24px rgba(0,0,0,0.18);
       }
-      .brochure-btn {
-        top: auto;
-        bottom: 16px;
-        right: 16px;
-        transform: none;
-        writing-mode: horizontal-tb;
-        padding: 10px 14px;
-        gap: 6px;
-      }
-      .brochure-btn i { margin-bottom: 0; }
-      .brochure-btn span { font-size: 0.8rem; }
-    }
+
+
+}
   
     /* About Section (luxury real estate style) */
     .about-section {
@@ -1805,6 +1777,31 @@
   .navbar-collapse {
     display: none !important;
   }
+  
+  /* Hide desktop phone number to avoid duplicates */
+  .call-btn.d-none.d-lg-inline-flex {
+    display: none !important;
+  }
+  
+  /* Show only mobile phone number on right side */
+  .call-btn.d-inline-flex.d-lg-none {
+    display: inline-flex !important;
+    order: 3;
+    margin-left: auto;
+  }
+  
+  /* Logo on left side */
+  .navbar-brand {
+    order: 1;
+    margin-right: auto;
+  }
+  
+  /* Adjust container for proper left-right layout */
+  .navbar .container-fluid {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 /* =====================
    Mobile Hero Section Fix

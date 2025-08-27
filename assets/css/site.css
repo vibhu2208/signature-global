@@ -152,35 +152,45 @@ body {
     display: none !important;
   }
   
-  /* Center the logo */
-  .logo {
-    flex: 1;
-    justify-content: center;
+  /* Mobile navbar container - flex layout */
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
   }
   
-  /* Adjust logo size on mobile */
+  /* Logo positioning - left aligned */
   .logo {
-    flex: 1;
-    justify-content: center;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    order: 1;
   }
   
   .logo-img {
-    max-height: 48px;
+    max-height: 40px;
     width: auto;
     height: auto;
   }
   
-  /* Style phone number */
-  .phone-number {
-    margin: 0;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    white-space: nowrap;
+  /* Phone number positioning - right aligned */
+  .nav-actions {
+    flex: 0 0 auto;
+    order: 2;
   }
   
-  /* Ensure container has proper spacing */
-  .navbar .container {
-    padding: 0.5rem 1rem;
+  .phone-number {
+    margin: 0;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border-radius: 20px;
+  }
+  
+  .phone-number svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -519,7 +529,7 @@ main {
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero-content p {
