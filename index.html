@@ -845,17 +845,81 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container inner">
-      <p>© <span id="yr"></span> Signature Global. All rights reserved.</p>
-      <p>Curated premium properties across NCR.</p>
+  <!-- Awesome Footer with Contact Form -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand">Signature Global</p>
+          <h3 class="footer-title">Experience Elevated Living</h3>
+          <p class="footer-text">Got questions or want to book a site visit? Send us your details and our team will reach out shortly.</p>
+          <ul class="footer-meta">
+            <li><i class="fa-solid fa-location-dot"></i> Sector 92, Gurugram</li>
+            <li><i class="fa-solid fa-phone"></i> +91 98117 50130</li>
+            <li><i class="fa-solid fa-envelope"></i> info@signatureglobal.in</li>
+          </ul>
+        </div>
+        <div class="footer-form-wrap">
+          <form id="footerForm" class="footer-form" novalidate>
+            <div class="ff-row">
+              <div class="ff-group">
+                <label for="ffName">Name</label>
+                <input type="text" id="ffName" name="name" placeholder="Your full name" required />
+              </div>
+            </div>
+            <div class="ff-row two">
+              <div class="ff-group">
+                <label for="ffPhone">Phone</label>
+                <input type="tel" id="ffPhone" name="phone" inputmode="tel" pattern="[0-9\s+-]{8,15}" placeholder="e.g. +91 98 7654 3210" required />
+              </div>
+              <div class="ff-group">
+                <label for="ffEmail">Email</label>
+                <input type="email" id="ffEmail" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="ff-actions">
+              <button type="submit" class="ff-btn" aria-label="Send Enquiry">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Enquiry
+              </button>
+              <small class="ff-consent">By submitting, you agree to be contacted about this project.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Signature Global. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="assets/js/site.js"></script>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Footer: dynamic year and simple form UX
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const footerForm = document.getElementById('footerForm');
+    if (footerForm) {
+      footerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('ffName');
+        const phone = document.getElementById('ffPhone');
+        const email = document.getElementById('ffEmail');
+        let valid = true;
+        [name, phone, email].forEach(inp => {
+          inp.classList.remove('is-invalid');
+          if (!inp.checkValidity()) { inp.classList.add('is-invalid'); valid = false; }
+        });
+        if (!valid) return;
+        // TODO: Integrate with backend/endpoint. For now, show a quick acknowledgment.
+        alert('Thank you! We\'ll contact you shortly.');
+        footerForm.reset();
+      });
+    }
   </script>
   <script src="assets/js/search.js"></script>
 </body>
