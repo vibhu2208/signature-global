@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/site.css" />
 </head>
@@ -47,7 +51,7 @@
   <section class="luxury-hero">
     <!-- Callback Button with Glass Effect -->
     <div class="header-actions">
-      <button class="callback-btn glass-effect">
+      <button class="callback-btn glass-effect" data-bs-toggle="modal" data-bs-target="#callbackModal">
         <span>Request a Callback</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -845,6 +849,48 @@
     </div>
   </main>
 
+  <!-- Callback Modal -->
+  <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="callbackModalLabel">
+            <i class="fa-solid fa-phone me-2"></i>
+            Request a Call Back
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-4">Fill in your details and our team will call you back within 24 hours.</p>
+          <form id="callbackForm" action="form.php" method="POST" novalidate>
+            <input type="hidden" name="project" value="Signature Global - Callback Request" />
+            <div class="mb-3">
+              <label for="cbName" class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="cbName" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+              <label for="cbMobile" class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="cbMobile" name="mobile" placeholder="Enter 10-digit phone number" pattern="[0-9]{10}" required>
+            </div>
+            <div class="mb-3">
+              <label for="cbEmail" class="form-label">Email Address (Optional)</label>
+              <input type="email" class="form-control" id="cbEmail" name="email" placeholder="Enter your email (optional)">
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-paper-plane me-2"></i>
+                Request Call Back
+              </button>
+            </div>
+            <small class="text-muted d-block text-center mt-3">
+              By submitting, you agree to be contacted by our team.
+            </small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Awesome Footer with Contact Form -->
   <footer id="footer" class="site-footer">
     <div class="footer-container">
@@ -860,7 +906,8 @@
           </ul>
         </div>
         <div class="footer-form-wrap">
-          <form id="footerForm" class="footer-form" novalidate>
+          <form id="footerForm" class="footer-form" action="form.php" method="POST" novalidate>
+            <input type="hidden" name="project" value="Signature Global Properties" />
             <div class="ff-row">
               <div class="ff-group">
                 <label for="ffName">Name</label>
@@ -870,11 +917,11 @@
             <div class="ff-row two">
               <div class="ff-group">
                 <label for="ffPhone">Phone</label>
-                <input type="tel" id="ffPhone" name="phone" inputmode="tel" pattern="[0-9\s+-]{8,15}" placeholder="e.g. +91 98 7654 3210" required />
+                <input type="tel" id="ffPhone" name="mobile" inputmode="tel" pattern="[0-9]{10}" placeholder="e.g. 9876543210" required />
               </div>
               <div class="ff-group">
-                <label for="ffEmail">Email</label>
-                <input type="email" id="ffEmail" name="email" placeholder="you@example.com" required />
+                <label for="ffEmail">Email (Optional)</label>
+                <input type="email" id="ffEmail" name="email" placeholder="you@example.com" />
               </div>
             </div>
             <div class="ff-actions">
@@ -898,9 +945,11 @@
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/site.js"></script>
   <script>
-    // Footer: dynamic year and simple form UX
+    // Footer: dynamic year and AJAX form submission
     document.getElementById('year').textContent = new Date().getFullYear();
     const footerForm = document.getElementById('footerForm');
     if (footerForm) {
@@ -909,15 +958,198 @@
         const name = document.getElementById('ffName');
         const phone = document.getElementById('ffPhone');
         const email = document.getElementById('ffEmail');
+        const submitBtn = footerForm.querySelector('.ff-btn');
+        
+        // Reset validation states
+        [name, phone, email].forEach(inp => inp.classList.remove('is-invalid'));
+        
+        // Validate required fields
         let valid = true;
-        [name, phone, email].forEach(inp => {
-          inp.classList.remove('is-invalid');
-          if (!inp.checkValidity()) { inp.classList.add('is-invalid'); valid = false; }
-        });
+        if (!name.value.trim()) {
+          name.classList.add('is-invalid');
+          valid = false;
+        }
+        if (!phone.value.trim() || !/^[0-9]{10}$/.test(phone.value.replace(/\D/g, ''))) {
+          phone.classList.add('is-invalid');
+          valid = false;
+        }
+        if (email.value && !email.checkValidity()) {
+          email.classList.add('is-invalid');
+          valid = false;
+        }
+        
         if (!valid) return;
-        // TODO: Integrate with backend/endpoint. For now, show a quick acknowledgment.
-        alert('Thank you! We\'ll contact you shortly.');
-        footerForm.reset();
+        
+        // Submit via AJAX
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        
+        const formData = new FormData(footerForm);
+        
+        fetch('form.php', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.includes('Thank You')) {
+            alert('Thank you! We\'ll contact you shortly.');
+            footerForm.reset();
+          } else {
+            alert(data || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Network error. Please try again.');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Enquiry';
+        });
+      });
+    }
+    
+    // Callback Modal Handler
+    const callbackBtn = document.querySelector('.callback-btn');
+    const callbackModalEl = document.getElementById('callbackModal');
+    const callbackForm = document.getElementById('callbackForm');
+    
+    let callbackModal;
+    if (typeof bootstrap !== 'undefined' && callbackModalEl) {
+      callbackModal = new bootstrap.Modal(callbackModalEl);
+    }
+    
+    if (callbackBtn) {
+      callbackBtn.addEventListener('click', function() {
+        if (callbackModal) {
+          callbackModal.show();
+        } else {
+          // Fallback: show modal manually
+          callbackModalEl.style.display = 'block';
+          callbackModalEl.classList.add('show');
+          document.body.classList.add('modal-open');
+          
+          // Add backdrop
+          const backdrop = document.createElement('div');
+          backdrop.className = 'modal-backdrop fade show';
+          document.body.appendChild(backdrop);
+        }
+      });
+    }
+    
+    // Close modal handlers
+    if (callbackModalEl) {
+      const closeButtons = callbackModalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close');
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          if (callbackModal) {
+            callbackModal.hide();
+          } else {
+            // Fallback: hide modal manually
+            callbackModalEl.style.display = 'none';
+            callbackModalEl.classList.remove('show');
+            document.body.classList.remove('modal-open');
+            
+            // Remove backdrop
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+          }
+        });
+      });
+    }
+    
+    if (callbackForm) {
+      callbackForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('cbName');
+        const mobile = document.getElementById('cbMobile');
+        const email = document.getElementById('cbEmail');
+        const submitBtn = callbackForm.querySelector('button[type="submit"]');
+        
+        // Reset validation states
+        [name, mobile, email].forEach(inp => {
+          inp.classList.remove('is-invalid');
+          inp.classList.remove('is-valid');
+        });
+        
+        // Validate required fields
+        let valid = true;
+        if (!name.value.trim()) {
+          name.classList.add('is-invalid');
+          valid = false;
+        } else {
+          name.classList.add('is-valid');
+        }
+        
+        const mobileValue = mobile.value.replace(/\D/g, '');
+        if (!mobileValue || mobileValue.length !== 10) {
+          mobile.classList.add('is-invalid');
+          valid = false;
+        } else {
+          mobile.classList.add('is-valid');
+        }
+        
+        if (email.value && !email.checkValidity()) {
+          email.classList.add('is-invalid');
+          valid = false;
+        } else if (email.value) {
+          email.classList.add('is-valid');
+        }
+        
+        if (!valid) return;
+        
+        // Submit via AJAX
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Sending...';
+        
+        const formData = new FormData(callbackForm);
+        
+        fetch('form.php', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.includes('Thank You')) {
+            alert('Thank you! We will call you back within 24 hours.');
+            callbackForm.reset();
+            if (callbackModal) {
+              callbackModal.hide();
+            } else {
+              // Fallback: hide modal manually
+              callbackModalEl.style.display = 'none';
+              callbackModalEl.classList.remove('show');
+              document.body.classList.remove('modal-open');
+              
+              // Remove backdrop
+              const backdrop = document.querySelector('.modal-backdrop');
+              if (backdrop) backdrop.remove();
+            }
+            // Reset validation classes
+            [name, mobile, email].forEach(inp => {
+              inp.classList.remove('is-invalid', 'is-valid');
+            });
+          } else {
+            alert(data || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Network error. Please try again.');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
       });
     }
   </script>
