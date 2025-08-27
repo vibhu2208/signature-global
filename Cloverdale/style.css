@@ -216,6 +216,61 @@
 
 @media (max-width: 991.98px) {
   .footer-grid { grid-template-columns: 1fr; }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
   .ff-row.two { grid-template-columns: 1fr; }
 }
   /* Responsive spacing between nav links using flex gap */
@@ -497,6 +552,61 @@
   }
   @media (max-width: 991.98px) {
     .quickinfo-container { transform: translateY(-28px); }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
     .qi-grid { grid-template-columns: repeat(2, 180px); justify-content: center; }
   }
   @media (max-width: 575.98px) {
@@ -518,6 +628,61 @@
   /* On tablet/mobile, remove vertical dividers; use horizontal separators instead */
   @media (max-width: 991.98px) {
     .locadv-col { border-right: 0; padding-right: 0; padding-left: 0; }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
     .locadv-col:not(:last-child) {
       border-bottom: 1px solid #e8eef5;
       padding-bottom: 12px;
@@ -558,6 +723,61 @@
       background: transparent;
       box-shadow: none;
     }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
 
     /* Mobile: show background when hamburger is open */
     .navbar .collapse {
@@ -814,6 +1034,61 @@
       gap: 10px;
       min-height: auto;
     }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
     .highlights-grid .highlight-slice { grid-column: auto; }
     .highlights-text { padding: 8px 2px; }
     .highlights-heading { text-align: center; }
@@ -886,6 +1161,61 @@
   /* Responsive tweaks for thumbs height */
   @media (max-width: 991.98px) {
     .gallery-thumbs .swiper-slide img { height: 72px; }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
   }
   @media (max-width: 575.98px) {
     .gallery-thumbs .swiper-slide img { height: 64px; }
@@ -1076,6 +1406,61 @@
     #floorplan .overlay-card { transform: none; }
   }
 
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
+
   /* Floating CTA */
   .floor-cta {
     position: absolute;
@@ -1256,6 +1641,61 @@
   /* Responsive: stack, size main, and make thumbs horizontal on <992px */
   @media (max-width: 991.98px) {
     .project_gallery .gallery_container { display: flex; flex-direction: column; }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
     /* Full-width main slider with mobile-appropriate height */
     .swiper-container { width: 100%; float: none; margin: 0; }
     .project_gallery .main-slider { height: 55vh; }
@@ -1354,3 +1794,107 @@
 
   .locadv-list { margin: 0; padding-left: 20px; font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #555; font-weight: 600; display: grid; gap: 6px; }
   .locadv-list li { line-height: 1.6; }
+/* =====================
+   Mobile Navbar Fix - Hide hamburger and nav links
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Hide hamburger and nav links in mobile view */
+  .navbar-toggler,
+  .navbar-collapse {
+    display: none !important;
+  }
+
+/* =====================
+   Mobile Hero Section Fix
+   ===================== */
+@media (max-width: 991.98px) {
+  /* Optimize hero height for mobile */
+  .hero {
+    height: 70vh; /* Reduced from 100vh for better mobile experience */
+    min-height: 500px; /* Ensure minimum height */
+  }
+  
+  /* Improve hero image positioning on mobile */
+  .hero-img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust hero overlay for mobile */
+  .hero-overlay {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Additional fixes for small phones */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+  
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+  
+  .hero-overlay p {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
+  
+  /* Hide desktop phone number to avoid duplicates */
+  .call-btn.d-none.d-lg-inline-flex {
+    display: none !important;
+  }
+  
+  /* Show only mobile phone number on right side */
+  .call-btn.d-inline-flex.d-lg-none {
+    display: inline-flex !important;
+    order: 3;
+    margin-left: auto;
+  }
+  
+  /* Logo on left side */
+  .navbar-brand {
+    order: 1;
+    margin-right: auto;
+  }
+  
+  /* Adjust container for proper left-right layout */
+  .navbar .container-fluid {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+  
+  /* Ensure phone number stays visible and properly positioned */
+  .call-btn {
+    display: inline-flex !important;
+  }
+  
+  /* Center the logo in mobile */
+  .navbar-brand {
+    margin: 0 auto;
+  }
+  
+  /* Adjust container for better mobile layout */
+  .navbar .container-fluid {
+    justify-content: space-between;
+  }
