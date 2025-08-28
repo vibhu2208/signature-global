@@ -690,11 +690,11 @@
     }
   }
  /* vertical text */
-    text-orientation: mixed;
+    /* text-orientation: mixed;
     letter-spacing: 1px;
     font-weight: 700;
     z-index: 1100;
-  }
+  } */
 
 
 /* Responsive adjustments for the floating button */
@@ -1879,7 +1879,7 @@
     justify-content: space-between;
     align-items: center;
   }
-}
+
   
   /* Ensure phone number stays visible and properly positioned */
   .call-btn {
@@ -1895,3 +1895,10 @@
   .navbar .container-fluid {
     justify-content: space-between;
   }
+
+/* Footer phone number styling */
+.footer-phone {
+  font-size: 2em;
+  font-weight: 800;
+  color: #fff;
+}

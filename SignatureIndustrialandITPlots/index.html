@@ -200,33 +200,6 @@
                 <span class="caption">Industrial & IT Plots</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-2.webp')">
-                <img src="images/industrial-plots-2.webp" class="entity-img" alt="Development"/>
-              </figure>
-              <div class="content">
-                <p class="title">Development</p>
-                <span class="caption">Sector 36, Sohna</span>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-2.webp')">
-                <img src="images/industrial-plots-2.webp" class="entity-img" alt="Industrial Plots - Layout"/>
-              </figure>
-              <div class="content">
-                <p class="title">Plot Layout</p>
-                <span class="caption">Industrial & IT Plots</span>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-sohna.webp')">
-                <img src="images/industrial-plots-sohna.webp" class="entity-img" alt="Industrial Plots - Sohna Location"/>
-              </figure>
-              <div class="content">
-                <p class="title">Strategic Location</p>
-                <span class="caption">Sector 36, Sohna</span>
-              </div>
-            </div>
           </div>
 
           <!-- Nav arrows for main slider -->
@@ -254,24 +227,6 @@
                 <img src="images/gallery03.webp" class="entity-img" alt="Premium Plots"/>
               </figure>
               <div class="content"><p class="title">Premium Plots</p></div>
-            </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-03.webp')">
-                <img src="images/industrial-plots-03.webp" class="entity-img" alt="Development"/>
-              </figure>
-              <div class="content"><p class="title">Development</p></div>
-            </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-2.webp')">
-                <img src="images/industrial-plots-2.webp" class="entity-img" alt="Plot Layout"/>
-              </figure>
-              <div class="content"><p class="title">Plot Layout</p></div>
-            </div>
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background-image:url('images/industrial-plots-sohna.webp')">
-                <img src="images/industrial-plots-sohna.webp" class="entity-img" alt="Strategic Location"/>
-              </figure>
-              <div class="content"><p class="title">Strategic Location</p></div>
             </div>
           </div>
         </div>
@@ -718,11 +673,7 @@
           <p class="footer-brand">Signature Global</p>
           <h3 class="footer-title">Experience Elevated Living</h3>
           <p class="footer-text">Got questions or want to book a site visit? Send us your details and our team will reach out shortly.</p>
-          <ul class="footer-meta">
-            <li><i class="fa-solid fa-location-dot"></i> Sector 92, Gurugram</li>
-            <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
-            <li><i class="fa-solid fa-envelope"></i> info@example.com</li>
-          </ul>
+          <ul class="footer-meta"><li><i class="fa-solid fa-phone"></i> <span class="footer-phone">+91 8527134491</span></li></ul>
         </div>
         <div class="footer-form-wrap">
           <form id="footerForm" class="footer-form" novalidate>
@@ -735,7 +686,7 @@
             <div class="ff-row two">
               <div class="ff-group">
                 <label for="ffPhone">Phone</label>
-                <input type="tel" id="ffPhone" name="phone" inputmode="tel" pattern="[0-9\s+-]{8,15}" placeholder="e.g. +91 98 7654 3210" required />
+                <input type="tel" id="ffPhone" name="mobile" inputmode="tel" pattern="[0-9\s+-]{8,15}" placeholder="e.g. +91 98 7654 3210" required />
               </div>
               <div class="ff-group">
                 <label for="ffEmail">Email</label>
@@ -753,7 +704,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Your Project. All rights reserved.</p>
+        <p>© <span id="year"></span> Signature Global. All rights reserved.</p>
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
           <span>•</span>
@@ -779,9 +730,41 @@
           if (!inp.checkValidity()) { inp.classList.add('is-invalid'); valid = false; }
         });
         if (!valid) return;
-        // TODO: Integrate with backend/endpoint. For now, show a quick acknowledgment.
-        alert('Thank you! We\'ll contact you shortly.');
-        footerForm.reset();
+        
+        // Submit form data to form.php
+        const formData = new FormData();
+        formData.append('name', name.value);
+        formData.append('mobile', phone.value);
+        formData.append('email', email.value);
+        formData.append('project', 'Signature Industrial & IT Plots');
+        
+        // Disable submit button during submission
+        const submitBtn = footerForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        
+        fetch('form.php', {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          alert(data);
+          footerForm.reset();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error submitting your request. Please try again.');
+        })
+        .finally(() => {
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
       });
     }
   </script>
